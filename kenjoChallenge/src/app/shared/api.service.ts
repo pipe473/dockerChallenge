@@ -15,7 +15,11 @@ export class ApiService {
     return this.http.post(this.url+"/artist", newArtist)
   }
 
-  getArtists(){
+  getAllArtists(){
     return this.http.get(this.url+"/artists/all")
+  }
+
+  getArtistById(artistId){
+    return this.http.get(this.url+"/artist/"+artistId)
   }
 }
