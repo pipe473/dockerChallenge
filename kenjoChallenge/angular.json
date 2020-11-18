@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "kenjoChallenge"
+    }
+  },
+  "defaultProject": "kenjoChallenge",
+  "cli": {
+    "analytics": false
+  }
 }
