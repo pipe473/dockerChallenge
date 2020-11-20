@@ -1,0 +1,15 @@
+.button-position > button{
+    margin-top: 3%;  
+}
+
+.d-flex.justify-content-center > button{
+    width: 50%;
+}
+
+.d-flex.justify-content-center{
+    text-align: center;
+}
+
+label{
+   color: #337ab7; 
+}

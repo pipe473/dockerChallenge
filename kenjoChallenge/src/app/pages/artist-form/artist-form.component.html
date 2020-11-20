@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+    <form>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="inputCiudad">Nombre</label>
+            <input
+              #name
+              type="nombre"
+              class="form-control"
+              id="inputNombre"
+              placeholder="Escribe el nombre de un artista"
+            />
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputFoto">Foto</label>
+            <input
+              #photoUrl
+              type="photo"
+              class="form-control"
+              id="inputPhoto"
+              placeholder="Inserta una url de una foto"
+            />
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputCodigo">Fecha</label>
+            <input
+              #birthdate
+              type="birthdate"
+              class="form-control"
+              id="inputFecha"
+              placeholder="Escribe fecha de nacimiento"
+            />
+          </div>
+          <div class="d-flex justify-content-center">
+              <button type="button" class="btn btn-primary" >Añadir Artista</button>
+          </div>
+        </div>
+      </form>
+</body>
+</html>
