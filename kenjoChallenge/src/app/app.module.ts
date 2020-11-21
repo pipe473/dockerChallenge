@@ -13,13 +13,13 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ArtistFormComponent } from './pages/artist-form/artist-form.component'
+import { NavbarComponent } from './components/navbar/navbar.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ArtistFormComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
