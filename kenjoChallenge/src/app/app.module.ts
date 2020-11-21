@@ -13,13 +13,17 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavbarComponent } from './components/navbar/navbar.component'
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { ArtistComponent } from './pages/artist/artist.component';
+import { AlbumsComponent } from './pages/albums/albums.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavbarComponent,
+    ArtistComponent,
+    AlbumsComponent,
   ],
   imports: [
     BrowserModule,
