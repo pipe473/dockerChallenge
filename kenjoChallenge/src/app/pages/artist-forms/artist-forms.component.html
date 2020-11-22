@@ -8,18 +8,18 @@
 <hr>
 <form>
     <div class="form-group">
-      <label for="InputEmail1">Name</label>
+      <label for="InputName">Name</label>
       <input type="name" class="form-control" #name>
     </div>
     <div class="form-group">
-      <label for="InputPassword1">Photo</label>
+      <label for="InputPhoto">Photo</label>
       <input type="photo" class="form-control" #photoUrl>
     </div>
     <div class="form-group">
-        <label for="InputPassword1">Birthdate</label>
+        <label for="InputBirthdate">Birthdate</label>
         <input type="birthdate" class="form-control" #birthdate>
       </div>
-    <button type="submit" class="btn btn-success">Add Artist</button>
+    <button type="button" (click)="createArtist( name.value, photoUrl.value, birthdate.value )" class="btn btn-success">Add Artist</button>
   </form>
   <br>
   <h1>Create A New Album</h1>

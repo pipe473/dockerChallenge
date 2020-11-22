@@ -20,13 +20,7 @@ export class ArtistComponent implements OnInit {
       console.log(params['id']);   
       this.apiService.getArtistById(this.id).subscribe((data:any) =>{
         console.log(data.name);        
-        this.newArtist = data;
-
-        // console.log(this.newArtist);
-        // console.log(data[0].name);
-        
-        
-        // console.log(this.newArtist);               
+        this.newArtist = data;          
       });  
     });
 

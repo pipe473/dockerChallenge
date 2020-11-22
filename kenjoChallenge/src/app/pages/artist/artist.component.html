@@ -1,15 +1,14 @@
-<h1 class="animated fadeIn fast">Artists <small>Top 10 Music</small></h1>
+<h1 class="animated fadeIn fast">{{newArtist.name}}</h1>
 
 <hr>
 
 <div class="card-columns">
-    <div class="card">
+    <div class="card animated fadeIn fast">
         <img [src]="newArtist.photoUrl"  class="card-img-top img-fluid" alt="Card image">
         <div class="card-body">
           <h4 class="card-title">{{newArtist.name}}</h4>
-          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          <button type="button" class="btn btn-outline-success btn-block">More info...</button>
+          <p class="card-text"><small class="text-muted">Date of Birth{{newArtist.birthdate | date: 'shortDate'}}</small></p>
+          <button type="button" class="btn btn-outline-success btn-block">Information about albums</button>
         </div>
       </div>
 </div>

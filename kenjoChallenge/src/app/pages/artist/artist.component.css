@@ -1,3 +1,11 @@
 .card-body{
     background: #343b3f !important;
 }
+
+.card{
+    margin-left: 90%;
+}
+
+.animated.fadeIn.fast{
+    margin-bottom: 5%;
+}
