@@ -11,7 +11,10 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
   public listArtists: Artist[];
 
-  constructor(private apiService: ApiService, private router: Router) { }
+  constructor(private apiService: ApiService, private router: Router) { 
+    
+  }
+
 
   ngOnInit(): void {
     this.apiService.getAllArtists().subscribe((data:Artist[]) =>{
@@ -20,8 +23,10 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  showArtist( idx: number ){
-    this.router.navigate(['/artist', idx])
+  showArtist( artistId: string ){
+    this.router.navigate(['/artist', artistId]);
+    console.log(artistId);
+    
   }
 
 }

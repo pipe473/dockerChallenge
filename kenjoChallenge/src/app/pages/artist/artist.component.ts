@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Artist } from 'src/app/models/artist';
+import { ApiService } from 'src/app/shared/api.service';
 
 @Component({
   selector: 'app-artist',
@@ -7,15 +9,31 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./artist.component.css']
 })
 export class ArtistComponent implements OnInit {
+  
+  public newArtist: Artist; 
+  public id : string;
 
-  constructor( private activatedRoute: ActivatedRoute) {
-    this.activatedRoute.params.subscribe( params => {
-      console.log(params);      
-    })
+  constructor( private activatedRoute: ActivatedRoute, private apiService: ApiService ) {
+   
+   this.activatedRoute.params.subscribe( params => {
+      this.id = params['id'];
+      console.log(params['id']);   
+      this.apiService.getArtistById(this.id).subscribe((data:any) =>{
+        console.log(data.name);        
+        this.newArtist = data;
+
+        // console.log(this.newArtist);
+        // console.log(data[0].name);
+        
+        
+        // console.log(this.newArtist);               
+      });  
+    });
 
    }
 
   ngOnInit(): void {
+    
   }
 
 }

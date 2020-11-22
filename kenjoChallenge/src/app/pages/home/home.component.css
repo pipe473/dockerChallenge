@@ -2,3 +2,11 @@ img{
     height: 195px;
     width: 100%;
 }
+
+.jumbotron.jumbotron-fluid.animated.fadeIn.fast{
+    background: #343b3f !important;
+}
+
+.card-body{
+    background: #343b3f !important;
+}

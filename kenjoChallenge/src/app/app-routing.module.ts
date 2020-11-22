@@ -3,11 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { ArtistComponent } from './pages/artist/artist.component';
 import { AlbumsComponent } from './pages/albums/albums.component';
+import { ArtistFormsComponent } from './pages/artist-forms/artist-forms.component';
 
 const routes: Routes = [
   {path: "home", component: HomeComponent},
   {path: "artist/:id", component: ArtistComponent},
   {path: "albums", component: AlbumsComponent},
+  {path: "artist-forms", component: ArtistFormsComponent},
   {path:'**', pathMatch: 'full', redirectTo: 'home'}
 ];
 
