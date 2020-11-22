@@ -6,7 +6,7 @@ import { AlbumsComponent } from './pages/albums/albums.component';
 
 const routes: Routes = [
   {path: "home", component: HomeComponent},
-  {path: "artist", component: ArtistComponent},
+  {path: "artist/:id", component: ArtistComponent},
   {path: "albums", component: AlbumsComponent},
   {path:'**', pathMatch: 'full', redirectTo: 'home'}
 ];

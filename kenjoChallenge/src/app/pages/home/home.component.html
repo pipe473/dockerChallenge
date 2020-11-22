@@ -6,14 +6,18 @@
   </div>
 
   <div class="card-columns">
-    <div class="card" *ngFor="let artist of listArtists;">
+    <div class="card animated fadeIn fast" *ngFor="let artist of listArtists; let i = index;">
         <img [src]="artist.photoUrl"  class="card-img-top img-fluid" alt="Card image">
         <div class="card-body">
           <h4 class="card-title">{{artist.name}}</h4>
           <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          <p class="card-text"><small class="text-muted">Last update {{artist._createdAt}}</small></p>
 
-          <button type="button" class="btn btn-outline-primary btn-block">More info...</button>
+          <button (click)="showArtist(i)"
+                type="button" class="btn btn-outline-primary btn-block">More info...
+          </button>
+
+          <!-- <a [routerLink]="['/artist', i]" class="btn btn-outline-primary">Show more...</a> -->
         </div>
       </div>
 </div>
