@@ -15,7 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ArtistComponent } from './pages/artist/artist.component';
-import { AlbumsComponent } from './pages/albums/albums.component'
+import { AlbumsComponent } from './pages/albums/albums.component';
+import { ArtistFormsComponent } from './pages/artist-forms/artist-forms.component'
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { AlbumsComponent } from './pages/albums/albums.component'
     NavbarComponent,
     ArtistComponent,
     AlbumsComponent,
+    ArtistFormsComponent,
   ],
   imports: [
     BrowserModule,
