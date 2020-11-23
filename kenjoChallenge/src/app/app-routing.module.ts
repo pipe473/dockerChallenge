@@ -8,6 +8,7 @@ import { ArtistFormsComponent } from './pages/artist-forms/artist-forms.componen
 const routes: Routes = [
   {path: "home", component: HomeComponent},
   {path: "artist/:id", component: ArtistComponent},
+  {path: "album/:id", component: AlbumsComponent},
   {path: "albums", component: AlbumsComponent},
   {path: "artist-forms", component: ArtistFormsComponent},
   {path:'**', pathMatch: 'full', redirectTo: 'home'}

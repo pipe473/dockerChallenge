@@ -6,24 +6,23 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
   public listArtists: Artist[];
 
-  constructor(private apiService: ApiService, private router: Router) { }
+  constructor(private apiService: ApiService, private router: Router) {}
 
   ngOnInit(): void {
-    this.apiService.getAllArtists().subscribe((data:Artist[]) =>{
-      this.listArtists = data;   
-      console.log(this.listArtists);         
+    this.apiService.getAllArtists().subscribe((data: Artist[]) => {
+      this.listArtists = data;
+      console.log(this.listArtists);
     });
   }
 
-  showArtist( artistId: string ){
-    this.router.navigate(['/artist', artistId]);
-    console.log(artistId);
-    
+  showArtist(artistIde: string) {
+    this.router.navigate(['/artist', artistIde]);
+    console.log(artistIde,'ide de artist');
   }
 
 }

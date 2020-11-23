@@ -1,7 +1,7 @@
 <div class="jumbotron jumbotron-fluid animated fadeIn fast">
     <div class="container">
-        <h1 class="animated fadeIn fast">Forms</h1>
-      <p class="lead">Here you can add artists and albums</p>
+        <h1 class="animated fadeIn fast">New Content</h1>
+      <p class="lead">Here you can add artists and their albums to grow the list.</p>
     </div>
   </div>
   <h1>Add A New Artist</h1>
@@ -19,7 +19,13 @@
         <label for="InputBirthdate">Birthdate</label>
         <input type="birthdate" class="form-control" #birthdate>
       </div>
-    <button type="button" (click)="createArtist( name.value, photoUrl.value, birthdate.value )" class="btn btn-success">Add Artist</button>
+    <button 
+        type="button" 
+        (click)="createArtist( name.value, photoUrl.value, birthdate.value )" 
+        class="btn btn-outline-success btn-block"
+      >
+        Add Artist
+    </button>
   </form>
   <br>
   <h1>Create A New Album</h1>
@@ -45,5 +51,11 @@
             <label for="InputPassword1">Genre</label>
             <input type="birthdate" class="form-control" #genre>
           </div>
-      <button type="submit" class="btn btn-success">Add Album</button>
+      <button 
+          type="button" 
+          class="btn btn-outline-success btn-block"
+          (click)="createAlbum(title.value, artistId.value, coverUrl.value, year.value, genre.value )"
+      >
+        Add Album
+      </button>
     </form>

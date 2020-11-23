@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Artist } from 'src/app/models/artist';
 import { ApiService } from 'src/app/shared/api.service';
 import { Router } from '@angular/router';
+import { Album } from 'src/app/models/album';
 
 @Component({
   selector: 'app-artist-forms',
@@ -17,6 +18,14 @@ export class ArtistFormsComponent implements OnInit {
     this.apiService.postArtist(artist).subscribe((data) =>{
       console.log(data);      
       this.router.navigateByUrl('/home');
+    })
+  }
+
+  createAlbum( title: string, artistId: string, coverUrl: string, year: number, genre: string ){
+    let newAlbum = new Album( title, artistId, coverUrl, year, genre );
+    this.apiService.postAlbum(newAlbum).subscribe((data) =>{
+      console.log(data);      
+      this.router.navigateByUrl('/albums');
     })
   }
 

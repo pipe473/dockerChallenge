@@ -16,7 +16,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ArtistComponent } from './pages/artist/artist.component';
 import { AlbumsComponent } from './pages/albums/albums.component';
-import { ArtistFormsComponent } from './pages/artist-forms/artist-forms.component'
+import { ArtistFormsComponent } from './pages/artist-forms/artist-forms.component';
+import { AlbumComponent } from './pages/album/album.component'
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ArtistFormsComponent } from './pages/artist-forms/artist-forms.componen
     ArtistComponent,
     AlbumsComponent,
     ArtistFormsComponent,
+    AlbumComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,22 +1,37 @@
 <div class="jumbotron jumbotron-fluid animated fadeIn fast">
-    <div class="container">
-        <h1 class="animated fadeIn fast">All The Music Lists</h1>
-      <p class="lead">Your favourite artists and their albums information.</p>
+  <div class="container">
+    <h1 class="animated fadeIn fast">All The Music Lists</h1>
+    <p class="lead">Your favourite artists and their albums information.</p>
+  </div>
+</div>
+
+<div class="card-columns">
+  <div
+    class="card animated fadeIn fast"
+    *ngFor="let artist of listArtists; let i = index"
+  >
+    <img
+      [src]="artist.photoUrl"
+      class="card-img-top img-fluid"
+      alt="Card image"
+    />
+    <div class="card-body">
+      <h4 class="card-title">{{ artist.name }}</h4>
+      <p class="card-text">
+        Date Of Birth: {{ artist.birthdate | date: "shortDate" }}
+      </p>
+      <p class="card-text">
+        <small class="text-muted"
+          >Created at {{ artist._createdAt | date: "short" }}</small
+        >
+      </p>
+      <button
+        (click)="showArtist(artist._id)"
+        type="button"
+        class="btn btn-outline-success btn-block"
+      >
+        More info...
+      </button>
     </div>
   </div>
-
-  <div class="card-columns">
-    <div class="card animated fadeIn fast" *ngFor="let artist of listArtists; let i = index;">
-        <img [src]="artist.photoUrl"  class="card-img-top img-fluid" alt="Card image">
-        <div class="card-body">
-          <h4 class="card-title">{{artist.name}}</h4>
-          <p class="card-text">Date Of Birth: {{artist.birthdate  | date: 'shortDate'}}</p>
-          <p class="card-text"><small class="text-muted">Created at {{artist._createdAt | date: 'short'}}</small></p>
-          <button (click)="showArtist(artist._id)"
-                   type="button" 
-                   class="btn btn-outline-success btn-block">
-                   More info...
-          </button>
-        </div>
-      </div>
 </div>
