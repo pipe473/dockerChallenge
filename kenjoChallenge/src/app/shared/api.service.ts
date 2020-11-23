@@ -30,4 +30,8 @@ export class ApiService {
   deleteArtist(artistId){
     return this.http.delete(`${this.url}/artist/${artistId}`)
   }
+
+  getAllAlbums(){
+    return this.http.get(`${this.url}/albums/all`)
+  }
 }
