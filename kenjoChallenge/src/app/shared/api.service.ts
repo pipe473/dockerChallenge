@@ -16,10 +16,14 @@ export class ApiService {
   }
 
   getAllArtists(){
-    return this.http.get(this.url+"/artists/all")
+    return this.http.get(`${this.url}/artists/all`)
   }
 
   getArtistById(artistId){
-    return this.http.get(this.url+"/artist/"+artistId)
+    return this.http.get(`${this.url}/artist/${artistId}`)
+  }
+
+  updateArtistById(newArtist: Artist, artistId){
+    return this.http.put(`${this.url}/artist/${artistId}`, newArtist)
   }
 }

@@ -1,14 +1,48 @@
-<h1 class="animated fadeIn fast">{{newArtist.name}}</h1>
+<h1 class="animated fadeIn fast">{{ newArtist.name }}</h1>
 
-<hr>
+<hr />
 
 <div class="card-columns">
-    <div class="card animated fadeIn fast">
-        <img [src]="newArtist.photoUrl"  class="card-img-top img-fluid" alt="Card image">
-        <div class="card-body">
-          <h4 class="card-title">{{newArtist.name}}</h4>
-          <p class="card-text"><small class="text-muted">Date of Birth{{newArtist.birthdate | date: 'shortDate'}}</small></p>
-          <button type="button" class="btn btn-outline-success btn-block">Information about albums</button>
+  <div class="card animated fadeIn fast">
+    <img
+      [src]="newArtist.photoUrl"
+      class="card-img-top img-fluid"
+      alt="Card image"
+    />
+    <div class="card-body">
+      <h4 class="card-title">{{ newArtist.name }}</h4>
+      <p class="card-text">
+        <small class="text-muted"
+          >Date of Birth {{ newArtist.birthdate | date: "shortDate" }}</small
+        >
+      </p>
+      <button type="button" class="btn btn-outline-success btn-block">
+        Information about albums
+      </button>
+      <form>
+        <div class="form-group">
+          <label for="InputName">Name</label>
+          <input type="name" class="form-control" #name />
         </div>
-      </div>
+        <div class="form-group">
+          <label for="InputPhoto">Photo</label>
+          <input type="photo" class="form-control" #photoUrl />
+        </div>
+        <div class="form-group">
+          <label for="InputBirthdate">Birthdate</label>
+          <input type="birthdate" class="form-control" #birthdate />
+        </div>
+        <button
+          type="button"
+          (click)="updateArtist(name.value, photoUrl.value, birthdate.value)"
+          class="btn btn-outline-warning btn-block"
+        >
+        Edit information
+        </button>
+      </form>
+      <button type="button" class="btn btn-outline-danger btn-block">
+        Delete
+      </button>
+    </div>
+  </div>
 </div>
