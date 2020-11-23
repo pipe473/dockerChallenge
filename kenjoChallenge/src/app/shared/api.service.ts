@@ -26,4 +26,8 @@ export class ApiService {
   updateArtistById(newArtist: Artist, artistId){
     return this.http.put(`${this.url}/artist/${artistId}`, newArtist)
   }
+
+  deleteArtist(artistId){
+    return this.http.delete(`${this.url}/artist/${artistId}`)
+  }
 }

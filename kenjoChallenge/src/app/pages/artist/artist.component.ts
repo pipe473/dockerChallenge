@@ -23,17 +23,21 @@ export class ArtistComponent implements OnInit {
         this.newArtist = data;          
       });  
     });
-
    }
 
    updateArtist(name: string, photoUrl: string, birthdate: Date ){
      let artistNew = new Artist(name, photoUrl, birthdate )
      this.apiService.updateArtistById(artistNew, this.id).subscribe((data:Artist) =>{
        console.log(data);    
-       this.router.navigate(['/home']);   
-     })
-    // this.router.navigate(['/home', artistId]);
-    // console.log(artistId);    
+       this.router.navigateByUrl('/home');  
+     }); 
+  }
+
+  deleteArtistById(){
+    this.apiService.deleteArtist(this.id).subscribe((data:Artist) =>{
+      console.log(data);
+      this.router.navigateByUrl('/home'); 
+    });
   }
 
   ngOnInit(): void {
