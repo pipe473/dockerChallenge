@@ -1,4 +1,4 @@
-<h1 class="animated fadeIn fast">{{ newAlbum.title }}</h1>
+<h1 class="animated fadeIn fast">Album : {{ newAlbum.title }}</h1>
 
 <hr />
 
@@ -10,18 +10,16 @@
       alt="Card image"
     />
     <div class="card-body">
-      <h4 class="card-title">{{ newAlbum.title }}</h4>
-      <p class="card-text">
-        <small class="text-muted"
-          >Year: {{ newAlbum.year }}</small
-        >
-      </p>
+      <h3 class="card-title">Title: {{ newAlbum.title }}</h3>
+      <h3 class="card-text">
+          Release Date: {{ newAlbum.year }}
+      </h3>
       <button 
           type="button" 
           class="btn btn-outline-success btn-block"
           routerLink="/albums"
       >
-        Information about albums
+        See more albums
       </button>
       <form>
         <div class="form-group">

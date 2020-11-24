@@ -3,7 +3,13 @@
 }
 
 .card-columns{
-    display: grid;
+    display: flex;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.btn.btn-outline-success.btn-block{
+    margin-bottom: 2%;
 }
 
 

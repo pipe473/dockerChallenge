@@ -9,7 +9,7 @@
         <img [src]="album.coverUrl"  class="card-img-top img-fluid" alt="Card image">
         <div class="card-body">
           <h2 class="card-title">{{album.title}}</h2>
-          <p class="card-text">Year: {{album.year}}</p>     
+          <p class="card-text">Release Date: {{album.year}}</p>     
           <p class="card-text"><small class="text-muted">Genre: {{album.genre}}</small></p> 
           <button
             (click)="showAlbum(album._id)"
