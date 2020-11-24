@@ -41,6 +41,14 @@ export class ApiService {
   }
 
   getAlbumById(albumId){
-    return this.http.get(`${this.url}/album/${albumId}`)
+    return this.http.get(`${this.url}/album/${albumId}`);    
+  }
+
+  updateAlbumById(newAlbum: Album, albumId){
+    return this.http.put(`${this.url}/album/${albumId}`, newAlbum)
+  }
+
+  deleteAlbum(albumtId){
+    return this.http.delete(`${this.url}/album/${albumtId}`)
   }
 }

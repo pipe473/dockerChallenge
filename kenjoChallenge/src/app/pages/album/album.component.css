@@ -1,0 +1,33 @@
+.card-body{
+    background: #343b3f;
+}
+
+.card{
+    margin-left: 50%;
+}
+
+.animated.fadeIn.fast{
+    width: 160%;
+    margin-bottom: 2%;
+}
+
+.btn.btn-outline-success.btn-block{
+    margin-bottom: 5%;
+}
+
+.btn.btn-outline-warning.btn-block{
+    margin-bottom: 5%;
+}
+
+.card-body{
+    background: #343b3f;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.card.animated.fadeIn.fast{
+    border-radius: 15px;
+}
+
+.card-img-top.img-fluid{
+    border-radius: 15px 15px 0px 0px;
+}

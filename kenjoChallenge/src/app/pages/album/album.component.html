@@ -1,2 +1,63 @@
 <h1 class="animated fadeIn fast">{{ newAlbum.title }}</h1>
-<hr>
+
+<hr />
+
+<div class="card-columns">
+  <div class="card animated fadeIn fast">
+    <img
+      [src]="newAlbum.coverUrl"
+      class="card-img-top img-fluid"
+      alt="Card image"
+    />
+    <div class="card-body">
+      <h4 class="card-title">{{ newAlbum.title }}</h4>
+      <p class="card-text">
+        <small class="text-muted"
+          >Year: {{ newAlbum.year }}</small
+        >
+      </p>
+      <button 
+          type="button" 
+          class="btn btn-outline-success btn-block"
+          routerLink="/albums"
+      >
+        Information about albums
+      </button>
+      <form>
+        <div class="form-group">
+          <label for="InputName">Title</label>
+          <input type="text" class="form-control" #title />
+        </div>
+        <div class="form-group">
+          <label for="InputArtistId">Id Artist</label>
+          <input type="text" class="form-control" #artistId />
+        </div>
+        <div class="form-group">
+          <label for="InputCoverUrl">Background Album</label>
+          <input type="text" class="form-control" #coverUrl />
+        </div>
+        <div class="form-group">
+            <label for="InputYear">Year</label>
+            <input type="number" class="form-control" #year />
+          </div>
+          <div class="form-group">
+            <label for="InputGenre">Genre</label>
+            <input type="text" class="form-control" #genre />
+          </div>
+        <button
+          type="button"
+          (click)="updateAlbum(title.value, artistId.value, coverUrl.value, year.value, genre.value)"
+          class="btn btn-outline-warning btn-block"
+        >
+        Edit information
+        </button>
+      </form>
+      <button 
+          type="button" 
+          (click)="deleteAlbumById()" 
+          class="btn btn-outline-danger btn-block">
+        Delete
+      </button>
+    </div>
+  </div>
+</div>

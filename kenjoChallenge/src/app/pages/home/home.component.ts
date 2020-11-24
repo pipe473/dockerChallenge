@@ -16,13 +16,13 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.apiService.getAllArtists().subscribe((data: Artist[]) => {
       this.listArtists = data;
-      console.log(this.listArtists);
+      console.log(data);
     });
   }
 
-  showArtist(artistIde: string) {
-    this.router.navigate(['/artist', artistIde]);
-    console.log(artistIde,'ide de artist');
+  showArtist(artistId: string) {
+    this.router.navigate(['/artist', artistId]);
+    console.log(artistId,'ide de artist');
   }
 
 }

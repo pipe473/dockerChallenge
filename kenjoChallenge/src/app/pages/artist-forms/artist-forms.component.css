@@ -1,5 +1,7 @@
 .jumbotron.jumbotron-fluid.animated.fadeIn.fast{
     background: #343b3f !important;
+    border-radius: 25px;
+    border: 1px solid white;
 }
 
 .ng-untouched.ng-pristine.ng-valid{

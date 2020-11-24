@@ -4,9 +4,20 @@ img{
 }
 
 .jumbotron.jumbotron-fluid.animated.fadeIn.fast{
-    background: #343b3f !important;
+    background: #343b3f;
+    border-radius: 25px;
+    border: 1px solid white;
 }
 
 .card-body{
     background: #343b3f !important;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.card.animated.fadeIn.fast{
+    border-radius: 15px;
+}
+
+.card-img-top.img-fluid{
+    border-radius: 15px 15px 0px 0px;
 }

@@ -12,7 +12,7 @@ export class AlbumsComponent implements OnInit {
   public albumList: Album[];
   public albumArtist: Album;
 
-  constructor(private apiService: ApiService, private router: Router) {  }
+  constructor(private apiService: ApiService, private router: Router) { }
 
   ngOnInit(): void {
     this.apiService.getAllAlbums().subscribe((data: Album[]) => {
