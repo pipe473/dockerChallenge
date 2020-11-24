@@ -29,10 +29,6 @@
           <input type="text" class="form-control" #title />
         </div>
         <div class="form-group">
-          <label for="InputArtistId">Id Artist</label>
-          <input type="text" class="form-control" #artistId />
-        </div>
-        <div class="form-group">
           <label for="InputCoverUrl">Background Album</label>
           <input type="text" class="form-control" #coverUrl />
         </div>
@@ -46,7 +42,7 @@
           </div>
         <button
           type="button"
-          (click)="updateAlbum(title.value, artistId.value, coverUrl.value, year.value, genre.value)"
+          (click)="updateAlbum(title.value, newAlbum.artistId, coverUrl.value, year.value, genre.value)"
           class="btn btn-outline-warning btn-block"
         >
         Edit information

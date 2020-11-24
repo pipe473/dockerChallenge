@@ -3,10 +3,11 @@
 }
 
 .card{
-    margin-left: 90%;
+    margin-left: 85%;
 }
 
 .animated.fadeIn.fast{
+    width: 115%;
     margin-bottom: 2%;
 }
 

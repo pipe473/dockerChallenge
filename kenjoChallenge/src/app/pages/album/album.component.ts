@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/shared/api.service';
 import { Album } from 'src/app/models/album';
 
+
 @Component({
   selector: 'app-album',
   templateUrl: './album.component.html',
