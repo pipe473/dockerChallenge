@@ -17,9 +17,9 @@
     />
     <div class="card-body">
       <h4 class="card-title">{{ artist.name }}</h4>
-      <!-- <p class="card-text">
-        Date Of Birth: {{ artist.birthdate | date: "shortDate" }}
-      </p> -->
+      <p class="card-text">
+        BirthDate: {{ artist.birthdate | date: "shortDate" }}
+      </p>
       <p class="card-text">
         <small class="text-muted"
           >Created at {{ artist._createdAt | date: "short" }}</small
