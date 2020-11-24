@@ -2,21 +2,13 @@
     background: #343b3f !important;
 }
 
-.card{
-    margin-left: 85%;
+.card-columns{
+    display: grid;
 }
 
-.animated.fadeIn.fast{
-    width: 115%;
-    margin-bottom: 2%;
-}
-
-.btn.btn-outline-success.btn-block{
-    margin-bottom: 5%;
-}
 
 .btn.btn-outline-warning.btn-block{
-    margin-bottom: 5%;
+    margin-bottom: 2%;
 }
 
 .card-body{
