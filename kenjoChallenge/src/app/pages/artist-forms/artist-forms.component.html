@@ -11,7 +11,7 @@
       <label class="center-block">Name:</label>
         <input class="form-control" formControlName="name">     
     </div>
-    <div *ngIf="artistForm.controls['name'].invalid && (artistForm.controls['name'].dirty || artistForm.controls['name'].touched)" class="alert alert-danger">
+    <div *ngIf="artistForm.controls['name'].invalid && (artistForm.controls['name'].dirty || artistForm.controls['name'].touched)" class="alert alert-success">
       <div *ngIf="artistForm.controls['name'].errors.required">
         Name is required.
       </div>
@@ -20,7 +20,7 @@
       <label class="center-block">Photo:</label>
         <input class="form-control" formControlName="photoUrl">      
     </div>
-    <div *ngIf="artistForm.controls['photoUrl'].invalid && (artistForm.controls['photoUrl'].dirty || artistForm.controls['photoUrl'].touched)" class="alert alert-danger">
+    <div *ngIf="artistForm.controls['photoUrl'].invalid && (artistForm.controls['photoUrl'].dirty || artistForm.controls['photoUrl'].touched)" class="alert alert-success">
       <div *ngIf="artistForm.controls['photoUrl'].errors.required">
         URL for artist image is required.
       </div>
@@ -29,13 +29,13 @@
       <label class="center-block">BirthDate:</label>  
         <input class="form-control" type="date" formControlName="birthdate">      
       </div>
-      <div *ngIf="artistForm.controls['birthdate'].invalid && (artistForm.controls['birthdate'].dirty || artistForm.controls['birthdate'].touched)" class="alert alert-danger">
+      <div *ngIf="artistForm.controls['birthdate'].invalid && (artistForm.controls['birthdate'].dirty || artistForm.controls['birthdate'].touched)" class="alert alert-success">
         <div *ngIf="artistForm.controls['birthdate'].errors.required">
           The birthdate is required.
         </div>
     </div>
     <button 
-        type="button" 
+        type="submit" 
         (click)="createArtistForm()"
         [disabled]="artistForm.pristine || artistForm.invalid" 
         class="btn btn-outline-success btn-block"

@@ -36,7 +36,7 @@ export class ArtistFormsComponent  {
   // createArtist( name: string, photoUrl: string, birthdate: Date ){
 
   createArtist(artista: Artist ){
-    if ( !artista.name || !artista.photoUrl || artista.birthdate ) {     
+    if ( !artista.name || !artista.photoUrl || !artista.birthdate ) {     
       console.log(artista);      
       Swal.fire({
         icon: 'error',
@@ -45,7 +45,7 @@ export class ArtistFormsComponent  {
       });
     } else {
       this.apiService.postArtist(new Artist( artista.name, artista.photoUrl, artista.birthdate )).subscribe((data: Artist) =>{
-        // this.apiService.artistaCreado = new Artist( artista.name, artista.photoUrl, artista.birthdate )
+        this.apiService.artistaCreado = new Artist( artista.name, artista.photoUrl, artista.birthdate )
         console.log(data);        
           Swal.fire({
             icon: 'success',
