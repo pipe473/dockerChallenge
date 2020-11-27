@@ -9,6 +9,7 @@ import { Album } from '../models/album';
 export class ApiService {
 
   private url = "http://localhost:3000"
+  public artistaCreado: Artist;
 
   constructor(private http: HttpClient) { }
 
