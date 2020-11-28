@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from 'src/app/shared/api.service';
+import { ArtistService } from 'src/app/shared/artist.service';
 import { Artist } from 'src/app/models/artist';
 import { Router } from '@angular/router';
 
@@ -11,18 +11,18 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
   public listArtists: Artist[];
 
-  constructor(private apiService: ApiService, private router: Router) {}
+  constructor(private apiService: ArtistService, private router: Router) {}
 
-  ngOnInit(): void {
-    this.apiService.getAllArtists().subscribe((data: Artist[]) => {
-      this.listArtists = data;
-      console.log(data);
-    });
-  }
+  ngOnInit(): void 
+    {
+      this.apiService.getAllArtists().subscribe((data: Artist[]) => {
+        this.listArtists = data;
+        console.log(data);
+      });
+    }
 
-  showArtist(artistId: string) {
-    this.router.navigate(['/artist', artistId]);
-    console.log(artistId,'ide de artist');
-  }
-
+  showArtist(artistId: string) 
+    {
+      this.router.navigate(['/artist', artistId]);
+    }
 }

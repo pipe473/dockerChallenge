@@ -14,43 +14,43 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  postArtist(newArtist: Artist){
-    return this.http.post(this.url+"/artist", newArtist)
-  }
+  // postArtist(newArtist: Artist){
+  //   return this.http.post(this.url+"/artist", newArtist)
+  // }
 
-  getAllArtists(){
-    return this.http.get(`${this.url}/artists/all`)
-  }
+  // getAllArtists(){
+  //   return this.http.get(`${this.url}/artists/all`)
+  // }
 
-  getArtistById(artistId){
-    return this.http.get(`${this.url}/artist/${artistId}`)
-  }
+  // getArtistById(artistId){
+  //   return this.http.get(`${this.url}/artist/${artistId}`)
+  // }
 
-  updateArtistById(newArtist: Artist, artistId){
-    return this.http.put(`${this.url}/artist/${artistId}`, newArtist)
-  }
+  // updateArtistById(newArtist: Artist, artistId){
+  //   return this.http.put(`${this.url}/artist/${artistId}`, newArtist)
+  // }
 
-  deleteArtist(artistId){
-    return this.http.delete(`${this.url}/artist/${artistId}`)
-  }
+  // deleteArtist(artistId){
+  //   return this.http.delete(`${this.url}/artist/${artistId}`)
+  // }
 
-  postAlbum(newAlbum: Album){
-    return this.http.post(this.url+"/album", newAlbum)
-  }
+  // postAlbum(newAlbum: Album){
+  //   return this.http.post(this.url+"/album", newAlbum)
+  // }
 
-  getAllAlbums(){
-    return this.http.get(`${this.url}/albums/all`)
-  }
+  // getAllAlbums(){
+  //   return this.http.get(`${this.url}/albums/all`)
+  // }
 
-  getAlbumById(albumId){
-    return this.http.get(`${this.url}/album/${albumId}`);    
-  }
+  // getAlbumById(albumId){
+  //   return this.http.get(`${this.url}/album/${albumId}`);    
+  // }
 
-  updateAlbumById(newAlbum: Album, albumId){
-    return this.http.put(`${this.url}/album/${albumId}`, newAlbum)
-  }
+  // updateAlbumById(newAlbum: Album, albumId){
+  //   return this.http.put(`${this.url}/album/${albumId}`, newAlbum)
+  // }
 
-  deleteAlbum(albumtId){
-    return this.http.delete(`${this.url}/album/${albumtId}`)
-  }
+  // deleteAlbum(albumtId){
+  //   return this.http.delete(`${this.url}/album/${albumtId}`)
+  // }
 }
