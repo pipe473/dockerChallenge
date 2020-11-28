@@ -1,9 +1,4 @@
-<div class="jumbotron jumbotron-fluid animated fadeIn fast">
-    <div class="container">
-        <h1 class="animated fadeIn fast">New Content</h1>
-      <p class="lead">Here you can add artists and their albums to grow the list.</p>
-    </div>
-  </div>
+
   <h1>Add A New Artist</h1>
 <hr>
 <form [formGroup]="artistForm" novalidate>
@@ -18,7 +13,7 @@
   </div>
     <div class="form-group">
       <label class="center-block">Photo:</label>
-        <input class="form-control" formControlName="photoUrl">      
+        <input class="form-control" type="url" formControlName="photoUrl">      
     </div>
     <div *ngIf="artistForm.controls['photoUrl'].invalid && (artistForm.controls['photoUrl'].dirty || artistForm.controls['photoUrl'].touched)" class="alert alert-success">
       <div *ngIf="artistForm.controls['photoUrl'].errors.required">
@@ -40,7 +35,7 @@
         [disabled]="artistForm.pristine || artistForm.invalid" 
         class="btn btn-outline-success btn-block"
       >
-        Add Artist
+        Add A New Artist
     </button>
   </form>
 
@@ -72,12 +67,11 @@
         class="btn btn-success">
         Save
     </button>
-</form> -->
+</form>
 
   <br>
-  <h1>Create A New Album</h1>
-  <hr>
-  <!-- <form>
+  
+   <form>
       <div class="form-group">
         <label for="InputTitle">Title</label>
         <input type="text" class="form-control" #title>

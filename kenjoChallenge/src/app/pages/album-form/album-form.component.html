@@ -1,0 +1,57 @@
+<h1>Create A New Album</h1>
+  <hr>
+  <form [formGroup]="albumForm" novalidate>
+    <div class="form-group">
+      <label class="center-block">Title:</label>
+        <input class="form-control" formControlName="title">     
+    </div>
+    <div *ngIf="albumForm.controls['title'].invalid && (albumForm.controls['title'].dirty || albumForm.controls['title'].touched)" class="alert alert-success">
+      <div *ngIf="albumForm.controls['title'].errors.required">
+        Title is required.
+      </div>
+  </div>
+    <div class="form-group">
+      <label class="center-block">Artist ID:</label>
+        <input class="form-control" type="text" formControlName="artistId">      
+    </div>
+    <div *ngIf="albumForm.controls['artistId'].invalid && (albumForm.controls['artistId'].dirty || albumForm.controls['artistId'].touched)" class="alert alert-success">
+      <div *ngIf="albumForm.controls['artistId'].errors.required">
+        Artist id is required.
+      </div>
+  </div>
+    <div class="form-group">
+      <label class="center-block">Cover URL:</label>  
+        <input class="form-control" type="url" formControlName="coverUrl">      
+      </div>
+      <div *ngIf="albumForm.controls['coverUrl'].invalid && (albumForm.controls['coverUrl'].dirty || albumForm.controls['coverUrl'].touched)" class="alert alert-success">
+        <div *ngIf="albumForm.controls['coverUrl'].errors.required">
+          The URL cover image is required.
+        </div>
+    </div>
+    <div class="form-group">
+      <label class="center-block">Release Year:</label>  
+        <input class="form-control" type="number" formControlName="year">      
+      </div>
+      <div *ngIf="albumForm.controls['year'].invalid && (albumForm.controls['year'].dirty || albumForm.controls['year'].touched)" class="alert alert-success">
+        <div *ngIf="albumForm.controls['year'].errors.required">
+          The Release year is required.
+        </div>
+    </div>
+    <div class="form-group">
+      <label class="center-block">Musical Genre:</label>  
+        <input class="form-control" type="text" formControlName="genre">      
+      </div>
+      <div *ngIf="albumForm.controls['genre'].invalid && (albumForm.controls['genre'].dirty || albumForm.controls['genre'].touched)" class="alert alert-success">
+        <div *ngIf="albumForm.controls['genre'].errors.required">
+          The musical genre is required.
+        </div>
+    </div>
+    <button 
+        type="submit" 
+        (click)="createAlbumForm()"
+        [disabled]="albumForm.pristine || albumForm.invalid" 
+        class="btn btn-outline-success btn-block"
+      >
+        Add A New Album
+    </button>
+  </form>

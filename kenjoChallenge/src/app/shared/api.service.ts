@@ -10,6 +10,7 @@ export class ApiService {
 
   private url = "http://localhost:3000"
   public artistaCreado: Artist;
+  public albumCreado: Album;
 
   constructor(private http: HttpClient) { }
 

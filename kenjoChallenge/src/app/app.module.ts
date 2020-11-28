@@ -18,6 +18,8 @@ import { ArtistComponent } from './pages/artist/artist.component';
 import { AlbumsComponent } from './pages/albums/albums.component';
 import { ArtistFormsComponent } from './pages/artist-forms/artist-forms.component';
 import { AlbumComponent } from './pages/album/album.component';
+import { AlbumFormComponent } from './pages/album-form/album-form.component';
+import { NewContentComponent } from './pages/new-content/new-content.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { AlbumComponent } from './pages/album/album.component';
     AlbumsComponent,
     ArtistFormsComponent,
     AlbumComponent,
+    AlbumFormComponent,
+    NewContentComponent,
   ],
   imports: [
     BrowserModule,
