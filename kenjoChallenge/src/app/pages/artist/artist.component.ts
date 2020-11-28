@@ -13,6 +13,7 @@ import Swal from 'sweetalert2/dist/sweetalert2.all.js';
 export class ArtistComponent {
   public newArtist: Artist;
   public id: string;
+  public artistNew: Artist;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -29,8 +30,8 @@ export class ArtistComponent {
 
   
   updateArtist(name: string, photoUrl: string, birthdate: Date) {
-    let artistNew = new Artist(name, photoUrl, birthdate);
-    this.apiService.updateArtistById(artistNew, this.id).subscribe((data: Artist) => {
+    this.artistNew = new Artist(name, photoUrl, birthdate);
+    this.apiService.updateArtistById(this.artistNew, this.id).subscribe((data: Artist) => {
         this.router.navigateByUrl('/home');
       });
   }
