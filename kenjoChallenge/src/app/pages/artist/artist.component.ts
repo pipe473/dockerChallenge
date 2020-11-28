@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Artist } from 'src/app/models/artist';
 import { ApiService } from 'src/app/shared/api.service';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2/dist/sweetalert2.all.js';
 
 @Component({
   selector: 'app-artist',
@@ -20,10 +21,8 @@ export class ArtistComponent {
   ) {
     this.activatedRoute.params.subscribe((params) => {
       this.id = params['id'];
-      // console.log(params['id'], 'Second log');
       this.apiService.getArtistById(this.id).subscribe((data: any) => {
-        this.newArtist = data;
-        // console.log(data);        
+        this.newArtist = data;    
       });
     });
   }
@@ -31,19 +30,42 @@ export class ArtistComponent {
   
   updateArtist(name: string, photoUrl: string, birthdate: Date) {
     let artistNew = new Artist(name, photoUrl, birthdate);
-    this.apiService
-      .updateArtistById(artistNew, this.id)
-      .subscribe((data: Artist) => {
-        console.log(data);
+    this.apiService.updateArtistById(artistNew, this.id).subscribe((data: Artist) => {
         this.router.navigateByUrl('/home');
       });
   }
-  
 
   deleteArtistById() {
-    this.apiService.deleteArtist(this.id).subscribe((data: Artist) => {
-      console.log(data);
-      this.router.navigateByUrl('/home');
-    });
+    Swal.fire({
+      title: '¿Quieres eliminar el artista seleccionado?',
+      text: "Asegúrate de eliminar el artista correcto",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: 'black',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Eliminar'
+      
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'Artista eliminado!',
+          'El artista ha sido eliminado correctamente...',
+          'success'
+        )
+        this.apiService.deleteArtist(this.id).subscribe((data: Artist) => {
+          this.router.navigateByUrl('/home');
+        });
+      }
+    })    
   }
+
+ 
+  
+
+  // deleteArtistById() {
+  //   this.apiService.deleteArtist(this.id).subscribe((data: Artist) => {
+  //     console.log(data);
+  //     this.router.navigateByUrl('/home');
+  //   });
+  // }
 }
