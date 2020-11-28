@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Artist } from 'src/app/models/artist';
 import { ArtistService } from 'src/app/shared/artist.service';
 import { Router } from '@angular/router';
-import { Swal } from 'sweetalert2/dist/sweetalert2.all.js';
+import Swal from 'sweetalert2/dist/sweetalert2.all.js';
 
 @Component({
   selector: 'app-artist',
